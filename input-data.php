@@ -102,13 +102,13 @@ if (isset($_POST['simpan'])) {
                             </div>
                             <div class="row mb-3 text-center">   
                                 <div class="col-5"> 
-                                    <h5 class="fw-semibold">Data Mentah</h5>
+                                    <h5 class="fw-semibold">Data Asli (Masa Lalu)</h5>
                                 </div>
                                 <div class="col-2 text-center">   
                                   <div class="vr"></div>
                               </div>
                               <div class="col-5"> 
-                                <h5 class="fw-semibold">Data Real</h5>
+                                <h5 class="fw-semibold">Data Asli (Perbandingan)</h5>
                             </div>
                         </div>
 

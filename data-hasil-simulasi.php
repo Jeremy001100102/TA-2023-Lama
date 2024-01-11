@@ -280,16 +280,16 @@ if(isset($_SESSION['convert_hasil_frekLR'])){
 										<tr class="text-center">
 											<td class="musimKemarau"><?= $_SESSION['total_dhasil_kemarau_MD'] ?></td>
 											<td colspan="4"></td>
-											<td><?= $_SESSION['total_dhasil_kemarau_MD']; ?></td>
+											<td><?= $_SESSION['total_dhasil_sim_kemarau_MD']; ?></td>
 											<td><?= $_SESSION['total_dreal_sim_kemarau_MD']; ?></td>
 											<td><?= "{$_SESSION['total_akurasi_dhasil_kemarau_MD']}%"; ?></td>
 										</tr>
 										<tr class="text-center">
 											<td class="musimHujan"><?= $_SESSION['total_dhasil_hujan_MD'] ?></td>
 											<td colspan="4"></td>
-											<td><?= $_SESSION['total_dhasil_hujan_MD']; ?></td>
+											<td><?= $_SESSION['total_dhasil_sim_hujan_MD']; ?></td>
 											<td><?= $_SESSION['total_dreal_sim_hujan_MD']; ?></td>
-											<td><?= "{$_SESSION['total_akurasi_dhasil_kemarau_MD']}%"; ?></td>
+											<td><?= "{$_SESSION['total_akurasi_dhasil_hujan_MD']}%"; ?></td>
 										</tr>
 										<tr class="text-center">
 											<th class="text-center" colspan="2" rowspan="3"  style=" vertical-align: middle !important;">Rata-rata</th>
@@ -415,16 +415,16 @@ if(isset($_SESSION['convert_hasil_frekLR'])){
 											<tr class="text-center">
 												<td class="musimKemarau"><?= $_SESSION['total_dhasil_kemarau_LB'] ?></td>
 												<td colspan="4"></td>
-												<td><?= $_SESSION['total_dhasil_kemarau_LB']; ?></td>
+												<td><?= $_SESSION['total_dhasil_sim_kemarau_LB']; ?></td>
 												<td><?= $_SESSION['total_dreal_sim_kemarau_LB']; ?></td>
 												<td><?= "{$_SESSION['total_akurasi_dhasil_kemarau_LB']}%"; ?></td>
 											</tr>
 											<tr class="text-center">
 												<td class="musimHujan"><?= $_SESSION['total_dhasil_hujan_LB'] ?></td>
 												<td colspan="4"></td>
-												<td><?= $_SESSION['total_dhasil_hujan_LB']; ?></td>
+												<td><?= $_SESSION['total_dhasil_sim_hujan_LB']; ?></td>
 												<td><?= $_SESSION['total_dreal_sim_hujan_LB']; ?></td>
-												<td><?= "{$_SESSION['total_akurasi_dhasil_kemarau_LB']}%"; ?></td>
+												<td><?= "{$_SESSION['total_akurasi_dhasil_hujan_LB']}%"; ?></td>
 											</tr>
 											<tr class="text-center">
 												<th class="text-center" colspan="2" rowspan="3"  style=" vertical-align: middle !important;">Rata-rata</th>
@@ -545,16 +545,16 @@ if(isset($_SESSION['convert_hasil_frekLR'])){
 												<tr class="text-center">
 													<td class="musimKemarau"><?= $_SESSION['total_dhasil_kemarau_LR'] ?></td>
 													<td colspan="4"></td>
-													<td><?= $_SESSION['total_dhasil_kemarau_LR']; ?></td>
+													<td><?= $_SESSION['total_dhasil_sim_kemarau_LR']; ?></td>
 													<td><?= $_SESSION['total_dreal_sim_kemarau_LR']; ?></td>
 													<td><?= "{$_SESSION['total_akurasi_dhasil_kemarau_LR']}%"; ?></td>
 												</tr>
 												<tr class="text-center">
 													<td class="musimHujan"><?= $_SESSION['total_dhasil_hujan_LR'] ?></td>
 													<td colspan="4"></td>
-													<td><?= $_SESSION['total_dhasil_hujan_LR']; ?></td>
+													<td><?= $_SESSION['total_dhasil_sim_hujan_LR']; ?></td>
 													<td><?= $_SESSION['total_dreal_sim_hujan_LR']; ?></td>
-													<td><?= "{$_SESSION['total_akurasi_dhasil_kemarau_LR']}%"; ?></td>
+													<td><?= "{$_SESSION['total_akurasi_dhasil_hujan_LR']}%"; ?></td>
 												</tr>
 												<tr class="text-center">
 													<th class="text-center" colspan="2" rowspan="3"  style=" vertical-align: middle !important;">Rata-rata</th>

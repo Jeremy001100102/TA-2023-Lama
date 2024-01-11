@@ -92,7 +92,7 @@ if (isset($_POST['cekLR']) || isset($_SESSION['aktif_cek_LR']) === true) {
 						<?php if(isset($_SESSION['kondisiMD'])) : ?>
 							<table class="table table-bordered">
 								<caption class="caption-top text-center">Meninggal Dunia</caption>
-								<caption class="caption-top">								
+								<caption>								
 									<ul style="list-style-type:square;">
 										<li style="color: blue;"><span style="color: gray;">Musim Hujan<span></li>
 											<li style="color: red;"><span style="color: gray;">Musim Kemarau<span></li>
@@ -102,7 +102,7 @@ if (isset($_POST['cekLR']) || isset($_SESSION['aktif_cek_LR']) === true) {
 											<tr class="text-center">
 												<th>#</th>
 												<th>Bulan</th>
-												<th>Data Mentah Tahun <?= $_SESSION['tahun_data_mentah']; ?></th>
+												<th>Data Tahun <?= $_SESSION['tahun_data_mentah']; ?></th>
 												<th>Data Real Tahun <?= $_SESSION['tahun_data_real']; ?></th>
 											</tr>
 										</thead>
@@ -169,7 +169,7 @@ if (isset($_POST['cekLR']) || isset($_SESSION['aktif_cek_LR']) === true) {
 								<?php if (isset($_SESSION['kondisiLB'])): ?>
 									<table class="table table-bordered">
 										<caption class="caption-top text-center">Luka Berat</caption>
-										<caption class="caption-top">								
+										<caption>								
 											<ul style="list-style-type:square;">
 												<li style="color: blue;"><span style="color: gray;">Musim Hujan<span></li>
 													<li style="color: red;"><span style="color: gray;">Musim Kemarau<span></li>
@@ -179,7 +179,7 @@ if (isset($_POST['cekLR']) || isset($_SESSION['aktif_cek_LR']) === true) {
 													<tr class="text-center">
 														<th>#</th>
 														<th>Bulan</th>
-														<th>Data Mentah Tahun  <?= $_SESSION['tahun_data_mentahLB']; ?></th>
+														<th>Data Tahun  <?= $_SESSION['tahun_data_mentahLB']; ?></th>
 														<th>Data Real Tahun <?= $_SESSION['tahun_data_realLB']; ?></th>
 													</tr>
 												</thead>
@@ -246,7 +246,7 @@ if (isset($_POST['cekLR']) || isset($_SESSION['aktif_cek_LR']) === true) {
 										<?php if (isset($_SESSION['kondisiLR'])) : ?>
 											<table class="table table-bordered">
 												<caption class="caption-top text-center">Luka Ringan</caption>
-												<caption class="caption-top">								
+												<caption>								
 													<ul style="list-style-type:square;">
 														<li style="color: blue;"><span style="color: gray;">Musim Hujan<span></li>
 															<li style="color: red;"><span style="color: gray;">Musim Kemarau<span></li>
@@ -256,7 +256,7 @@ if (isset($_POST['cekLR']) || isset($_SESSION['aktif_cek_LR']) === true) {
 															<tr class="text-center">
 																<th>#</th>
 																<th>Bulan</th>
-																<th>Data Mentah Tahun <?= $_SESSION['tahun_data_mentahLR']; ?></th>
+																<th>Data Tahun <?= $_SESSION['tahun_data_mentahLR']; ?></th>
 																<th>Data Real Tahun <?= $_SESSION['tahun_data_realLR']; ?></th>
 															</tr>
 														</thead>

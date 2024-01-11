@@ -63,7 +63,7 @@ for ($i=0; $i < count($bulan); $i++) {
 					<div class="position-relative">
 						<table class="table table-bordered">
 							<caption class="caption-top text-center">Data Meninggal Dunia <?=  $_SESSION['hitung_tahundataMentahMD']; ?></caption>
-							<caption class="caption-top">								
+							<caption>								
 								<ul style="list-style-type:square;">
 									<li style="color: blue;"><span style="color: gray;">Musim Hujan<span></li>
 									<li style="color: red;"><span style="color: gray;">Musim Kemarau<span></li>
@@ -114,7 +114,7 @@ for ($i=0; $i < count($bulan); $i++) {
 					<div class="position-relative">
 						<table class="table table-bordered">
 							<caption class="caption-top text-center">Data Luka Berat <?=  $_SESSION['hitung_tahundataMentahLB']; ?></caption>
-							<caption class="caption-top">								
+							<caption>								
 								<ul style="list-style-type:square;">
 									<li style="color: blue;"><span style="color: gray;">Musim Hujan<span></li>
 									<li style="color: red;"><span style="color: gray;">Musim Kemarau<span></li>
@@ -165,7 +165,7 @@ for ($i=0; $i < count($bulan); $i++) {
 					<div class="position-relative">
 						<table class="table table-bordered">
 							<caption class="caption-top text-center">Data Luka Ringan <?=  $_SESSION['hitung_tahundataMentahLR']; ?></caption>
-							<caption class="caption-top">								
+							<caption>								
 								<ul style="list-style-type:square;">
 									<li style="color: blue;"><span style="color: gray;">Musim Hujan<span></li>
 									<li style="color: red;"><span style="color: gray;">Musim Kemarau<span></li>

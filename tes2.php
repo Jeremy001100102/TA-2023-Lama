@@ -1,15 +1,98 @@
 <?php 
-// set_time_limit(60); 
+set_time_limit(300);
+$start = time(); 
 
 $bulan = ["Januari","Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
 $musim_kemarau = ["April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober"];
 $musim_hujan = ["Januari","Februari", "Maret","November", "Desember"];
 
+
+$datasimulasi_MD= [
+	[
+		"tahun" => "2007",
+		"frekuensi" => [1,5,6,3,5,6,8,3,5,3,3,9] 
+	],
+
+	[
+		"tahun" => "2008",
+		"frekuensi" => [5,4,6,4,5,6,9,4,6,2,10,7] 
+	],
+
+	[
+		"tahun" => "2009",
+		"frekuensi" => [2,3,4,3,6,9,7,6,5,6,4,7] 
+	],
+
+	[
+		"tahun" => "2010",
+		"frekuensi" => [3,6,3,2,4,2,4,5,2,5,5,1] 
+	],
+
+	[
+		"tahun" => "2011",
+		"frekuensi" => [1,2,1,4,3,1,10,8,3,3,3,4] 
+	],
+
+	[
+		"tahun" => "2012",
+		"frekuensi" => [4,2,4,4,5,11,6,5,6,6,3,4] 
+	],
+
+	[
+		"tahun" => "2013",
+		"frekuensi" => [1,8,1,2,8,6,3,5,6,2,5,3] 
+	],
+
+	[
+		"tahun" => "2014",
+		"frekuensi" => [10,2,5,3,8,2,3,5,5,6,5,5] 
+	],
+
+	[
+		"tahun" => "2015",
+		"frekuensi" => [4,6,5,8,4,8,3,6,1,6,7,2] 
+	],
+
+	[
+		"tahun" => "2016",
+		"frekuensi" => [5,2,1,7,5,7,1,5,5,7,2,4] 
+	],
+
+	[
+		"tahun" => "2017",
+		"frekuensi" => [11,4,2,2,6,4,7,5,6,5,2,4] 
+	],
+
+	[
+		"tahun" => "2018",
+		"frekuensi" => [4,5,4,3,6,6,5,9,6,3,3,5] 
+	],
+
+	[
+		"tahun" => "2019",
+		"frekuensi" => [6,3,4,1,3,7,8,6,8,4,6,5] 
+	]
+];
+
+// echo count($datasimulasi_MD);
+// echo "<br>";
+
+// foreach ($datasimulasi_MD as $data) {
+// 	echo $data['tahun']."<br>";
+// 	for ($i=0; $i < count($data['frekuensi']); $i++) { 
+// 		echo "{$data['frekuensi'][$i]}";
+// 	}
+// 	echo"<br>";
+// }
+
+
+
+
 //data Meninggal
 //$dataS2019_MD = [6,3,4,1,3,7,8,6,8,4,6,5];
 //$dataR2020_MD = [3,3,3,4,3,2,5,3,8,9,4,4];
 //$dataS2020_MD = [3,3,3,4,3,2,5,3,8,9,4,4];
-//$dataR2021_MD = [2,5,3,2,3,5,3,3,2,5,4,2]
+//$dataR2021_MD = [2,5,3,2,3,5,3,3,2,5,4,2];
 //$dataS2021_MD = [2,5,3,2,3,5,3,3,2,5,4,2];
 //$dataR2022_MD = [4,2,3,1,1,2,3,4,6,1,1,1];
 
@@ -54,125 +137,125 @@ $musim_hujan = ["Januari","Februari", "Maret","November", "Desember"];
 // $dataS2019_LR = [26,18,25,24,36,38,29,36,26,32,30,31];
 // $dataR2020_LR = [29,30,25,25,35,37,41,31,58,41,37,40];
 
-$dataR2020_MD = [29, 38, 46, 45, 41, 40, 28, 31, 31, 42, 28, 49];
-$dataS2019_MD = [29, 29, 42, 23, 42, 36, 35, 30, 38, 40, 31,30];
-$dataS2019_LB = [12,41,34,26,31,28,21,23,29,31,35,31];
-$dataR2020_LB = [26,18,25,24,36,38,29,36,26,32,30,31];
-$dataS2019_LR = [26,18,25,24,36,38,29,36,26,32,30,31];
-$dataR2020_LR = [29,30,25,25,35,37,41,31,58,41,37,40];
+	$dataR2020_MD = [29, 38, 46, 45, 41, 40, 28, 31, 31, 42, 28, 49];
+	$dataS2019_MD = [29, 29, 42, 23, 42, 36, 35, 30, 38, 40, 31,30];
+	$dataS2019_LB = [12,41,34,26,31,28,21,23,29,31,35,31];
+	$dataR2020_LB = [26,18,25,24,36,38,29,36,26,32,30,31];
+	$dataS2019_LR = [26,18,25,24,36,38,29,36,26,32,30,31];
+	$dataR2020_LR = [29,30,25,25,35,37,41,31,58,41,37,40];
 
 
 
 
 
 //musim hujan dan kemarau
-$jumlah_kemarau_MD = 0;
-$jumlah_hujan_MD = 0;
-$jumlahR_kemarau_MD = 0;
-$jumlahR_hujan_MD = 0;
+	$jumlah_kemarau_MD = 0;
+	$jumlah_hujan_MD = 0;
+	$jumlahR_kemarau_MD = 0;
+	$jumlahR_hujan_MD = 0;
 
-$jumlah_kemarau_LB = 0;
-$jumlah_hujan_LB = 0;
-$jumlahR_kemarau_LB = 0;
-$jumlahR_hujan_LB = 0;
+	$jumlah_kemarau_LB = 0;
+	$jumlah_hujan_LB = 0;
+	$jumlahR_kemarau_LB = 0;
+	$jumlahR_hujan_LB = 0;
 
-$jumlah_kemarau_LR = 0;
-$jumlah_hujan_LR = 0;
-$jumlahR_kemarau_LR = 0;
-$jumlahR_hujan_LR = 0;
+	$jumlah_kemarau_LR = 0;
+	$jumlah_hujan_LR = 0;
+	$jumlahR_kemarau_LR = 0;
+	$jumlahR_hujan_LR = 0;
 
 
 
-$jumlahR_MD = 0;
-$jumlahR_LB = 0;
-$jumlahR_LR = 0;
+	$jumlahR_MD = 0;
+	$jumlahR_LB = 0;
+	$jumlahR_LR = 0;
 
 
 
 //Jumlah frekuensi 
-$jumlah_MD = 0;
-$jumlah_LB = 0;
-$jumlah_LR = 0; 
-for ($i=0; $i < count($dataS2019_MD); $i++) { 
+	$jumlah_MD = 0;
+	$jumlah_LB = 0;
+	$jumlah_LR = 0; 
+	for ($i=0; $i < count($dataS2019_MD); $i++) { 
 	//Meninggal Dunia
-	$jumlah_MD += $dataS2019_MD[$i];
-	$jumlahR_MD += $dataR2020_MD[$i];
+		$jumlah_MD += $dataS2019_MD[$i];
+		$jumlahR_MD += $dataR2020_MD[$i];
 
 	//Luka Berat
-	$jumlah_LB += $dataS2019_LB[$i];
-	$jumlahR_LB += $dataR2020_LB[$i];
+		$jumlah_LB += $dataS2019_LB[$i];
+		$jumlahR_LB += $dataR2020_LB[$i];
 
 	//Luka Ringan
-	$jumlah_LR += $dataS2019_LR[$i];
-	$jumlahR_LR += $dataR2020_LR[$i];
+		$jumlah_LR += $dataS2019_LR[$i];
+		$jumlahR_LR += $dataR2020_LR[$i];
 
 	//musim kemarau dan musim hujan
-	if($i >= 3 && $i <= 9){
-		$jumlah_kemarau_MD += $dataS2019_MD[$i];
-		$jumlahR_kemarau_MD += $dataR2020_MD[$i];
+		if($i >= 3 && $i <= 9){
+			$jumlah_kemarau_MD += $dataS2019_MD[$i];
+			$jumlahR_kemarau_MD += $dataR2020_MD[$i];
 
-		$jumlah_kemarau_LB += $dataS2019_LB[$i];
-		$jumlahR_kemarau_LB += $dataR2020_LB[$i];
+			$jumlah_kemarau_LB += $dataS2019_LB[$i];
+			$jumlahR_kemarau_LB += $dataR2020_LB[$i];
 
-		$jumlah_kemarau_LR += $dataS2019_LR[$i];
-		$jumlahR_kemarau_LR += $dataR2020_LR[$i];
-	}else{
-		$jumlah_hujan_MD += $dataS2019_MD[$i];
-		$jumlahR_hujan_MD += $dataR2020_MD[$i];
+			$jumlah_kemarau_LR += $dataS2019_LR[$i];
+			$jumlahR_kemarau_LR += $dataR2020_LR[$i];
+		}else{
+			$jumlah_hujan_MD += $dataS2019_MD[$i];
+			$jumlahR_hujan_MD += $dataR2020_MD[$i];
 
-		$jumlah_hujan_LB += $dataS2019_LB[$i];
-		$jumlahR_hujan_LB += $dataR2020_LB[$i];
+			$jumlah_hujan_LB += $dataS2019_LB[$i];
+			$jumlahR_hujan_LB += $dataR2020_LB[$i];
 
-		$jumlah_hujan_LR += $dataS2019_LR[$i];
-		$jumlahR_hujan_LR += $dataR2020_LR[$i];
+			$jumlah_hujan_LR += $dataS2019_LR[$i];
+			$jumlahR_hujan_LR += $dataR2020_LR[$i];
+		}
 	}
-}
 
 //rata2 Frekuensi Meninggal Dunia
-$rata2F_MD = round($jumlah_MD / count($bulan)); 
-$rata2_MD = round($jumlahR_MD / count($bulan));
+	$rata2F_MD = round($jumlah_MD / count($bulan)); 
+	$rata2_MD = round($jumlahR_MD / count($bulan));
 //rata2 Frekuensi Luka Berat
-$rata2F_LB= round($jumlah_LB/ count($bulan)); 
-$rata2_LB= round($jumlahR_LB/ count($bulan));
+	$rata2F_LB= round($jumlah_LB/ count($bulan)); 
+	$rata2_LB= round($jumlahR_LB/ count($bulan));
 //rata2 Frekuensi Luka Ringan
-$rata2F_LR = round($jumlah_LR / count($bulan)); 
-$rata2_LR = round($jumlahR_LR / count($bulan));
+	$rata2F_LR = round($jumlah_LR / count($bulan)); 
+	$rata2_LR = round($jumlahR_LR / count($bulan));
 
 
 
 //Distribusi Probabilitas
 	//rumus p = f / t
-$dataProb_MD = [];
-$jumlahProb_MD = 0;
-$dataProb_LB = [];
-$jumlahProb_LB = 0;
-$dataProb_LR = [];
-$jumlahProb_LR = 0;
-for ($i=0; $i < count($dataS2019_MD) ; $i++) { 
-	$dataProb_MD[$i] = number_format($dataS2019_MD[$i] / $jumlah_MD, 2);
-	$jumlahProb_MD += ($dataS2019_MD[$i]/$jumlah_MD);
+	$dataProb_MD = [];
+	$jumlahProb_MD = 0;
+	$dataProb_LB = [];
+	$jumlahProb_LB = 0;
+	$dataProb_LR = [];
+	$jumlahProb_LR = 0;
+	for ($i=0; $i < count($dataS2019_MD) ; $i++) { 
+		$dataProb_MD[$i] = number_format($dataS2019_MD[$i] / $jumlah_MD, 2);
+		$jumlahProb_MD += ($dataS2019_MD[$i]/$jumlah_MD);
 
-	$dataProb_LB[$i] = number_format($dataS2019_LB[$i] / $jumlah_LB, 2);
-	$jumlahProb_LB += ($dataS2019_LB[$i]/$jumlah_LB);
+		$dataProb_LB[$i] = number_format($dataS2019_LB[$i] / $jumlah_LB, 2);
+		$jumlahProb_LB += ($dataS2019_LB[$i]/$jumlah_LB);
 
-	$dataProb_LR[$i] = number_format($dataS2019_LR[$i] / $jumlah_LR, 2);
-	$jumlahProb_LR += ($dataS2019_LR[$i]/$jumlah_LR);
-}
+		$dataProb_LR[$i] = number_format($dataS2019_LR[$i] / $jumlah_LR, 2);
+		$jumlahProb_LR += ($dataS2019_LR[$i]/$jumlah_LR);
+	}
 
 
 
 //Kumulatif
 	//rumus Kt(x) = Pt(x) + Pt-1(x);
-$dataKumu_MD = [];
-$dataKumu_LB= [];
-$dataKumu_LR= [];
-for ($i=0; $i <count($dataS2019_MD) ; $i++) { 
-	$dataKumu_MD[$i] = $i == 0 ? $dataProb_MD[$i] : number_format($dataProb_MD[$i] + $dataKumu_MD[$i-1],2); 
+	$dataKumu_MD = [];
+	$dataKumu_LB= [];
+	$dataKumu_LR= [];
+	for ($i=0; $i <count($dataS2019_MD) ; $i++) { 
+		$dataKumu_MD[$i] = $i == 0 ? $dataProb_MD[$i] : number_format($dataProb_MD[$i] + $dataKumu_MD[$i-1],2); 
 
-	$dataKumu_LB[$i] = $i == 0 ? $dataProb_LB[$i] : number_format($dataProb_LB[$i] + $dataKumu_LB[$i-1],2); 
+		$dataKumu_LB[$i] = $i == 0 ? $dataProb_LB[$i] : number_format($dataProb_LB[$i] + $dataKumu_LB[$i-1],2); 
 
-	$dataKumu_LR[$i] = $i == 0 ? $dataProb_LR[$i] : number_format($dataProb_LR[$i] + $dataKumu_LR[$i-1],2);  
-}
+		$dataKumu_LR[$i] = $i == 0 ? $dataProb_LR[$i] : number_format($dataProb_LR[$i] + $dataKumu_LR[$i-1],2);  
+	}
 
 
 //interval
@@ -234,9 +317,17 @@ for ($i=0; $i <count($dataS2019_MD) ; $i++) {
 	 // }
 
 	 $jumlahPercobaan = 0;
+	 $akurasi = 96;
+	 $akurasi_tertinggi = 0;
+	 $waktu_batasan = 15; 
 
-	 
+	 	 
+
 	 while (true) {
+
+	 	$end = time();
+		$executionTime = $end - $start;
+
 	 	ulang :
 	 	$tempA = rand(1, $m-1);
 	 	$tempC = rand(1, $m-1);
@@ -284,17 +375,17 @@ for ($i=0; $i <count($dataS2019_MD) ; $i++) {
 	 	}
 
 	 	for ($r=0; $r < count($nilai_zi_MD); $r++) {
-	 			$hitung = 0;
-	 			for ($u=0; $u < count($nilai_zi_MD); $u++) { 
-	 				if($nilai_zi_MD[$r] == $nilai_zi_MD[$u]){
-	 					$hitung++;
-	 				}
+	 		$hitung = 0;
+	 		for ($u=0; $u < count($nilai_zi_MD); $u++) { 
+	 			if($nilai_zi_MD[$r] == $nilai_zi_MD[$u]){
+	 				$hitung++;
 	 			}
+	 		}
 
-	 			if ($hitung > 2) {
-	 				goto ulang;
-	 			}
-	 				}
+	 		if ($hitung > 2) {
+	 			goto ulang;
+	 		}
+	 	}
 
 	//Hasil simulasi
 	//jika Batas Awal Interval >= Angka Acak ≤ Batas Akhir Interval selainnya 	
@@ -443,18 +534,34 @@ for ($i=0; $i <count($dataS2019_MD) ; $i++) {
 
 
 
+  
+    if ($rata2A_LR == $akurasi) {
+       
+        break;
+    }
 
-	 	if($rata2A_MD >= 94){ 
-	 		break;
+   
+	 	
+	 	if($rata2_LR !== $akurasi && $executionTime == $waktu_batasan){
+	 		$akurasi--;
+	 		$waktu_batasan += $waktu_batasan;
+	 	}
 
-	 	} 
+	 	
+
+	 	
+	 	
+	 	
 
 	 	$jumlahPercobaan++;
 
 	 }
+	
+ 	 
+	
 	 echo "Hasil Rata-Rata Meninggal Dunia 2021 -> 2022 = $rata2A_LR<br>";
 	 echo "Hasil Tingkat Akurasi Meninggal Dunia 2021 -> 2022 = $akurasiT_LR";
-	 
+	 echo "<br> waktu eksekusi : $executionTime detik";
 
 	 ?>
 

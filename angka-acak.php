@@ -5,14 +5,14 @@
 // }
 
 //rumus zi + 1 = (a.zi + c) mod m
-define("a_MD", 21); //konstanta pengali
-define("c_MD", 25); //konstanta pergeseran
+define("a_MD", 28); //konstanta pengali
+define("c_MD", 4); //konstanta pergeseran
 define("m_MD", 99); //konstanta modulus
-define("zi_MD", 61);
+define("zi_MD", 67);
 
 //Meninggal Dunia
 $_SESSION['angkaAcakMD'] = [];
-function angkaAcak_MD($a = 21, $c=25, $m=99, $zi=61){
+function angkaAcak_MD($a = a_MD, $c= c_MD, $m= m_MD, $zi= zi_MD){
 	global $bulan;
 	//Angka Acak Meninggal Dunia
 	$angka_acakMD = [];
@@ -98,7 +98,7 @@ function angkaAcak_LR($a = 85, $c=94, $m=99, $zi=58){
 						</div>
 						<table class="table table-bordered">
 							<caption class="caption-top text-center">Data Meninggal Dunia <?=  $_SESSION['hitung_tahundataMentahMD']; ?></caption>
-							<caption class="caption-top">								
+							<caption>								
 								<ul style="list-style-type:square;">
 									<li style="color: blue;"><span style="color: gray;">Musim Hujan<span></li>
 										<li style="color: red;"><span style="color: gray;">Musim Kemarau<span></li>
@@ -157,7 +157,7 @@ function angkaAcak_LR($a = 85, $c=94, $m=99, $zi=58){
 								</div>
 								<table class="table table-bordered">
 									<caption class="caption-top text-center">Data Luka Berat <?=  $_SESSION['hitung_tahundataMentahLB']; ?></caption>
-									<caption class="caption-top">								
+									<caption>								
 										<ul style="list-style-type:square;">
 											<li style="color: blue;"><span style="color: gray;">Musim Hujan<span></li>
 												<li style="color: red;"><span style="color: gray;">Musim Kemarau<span></li>
@@ -216,7 +216,7 @@ function angkaAcak_LR($a = 85, $c=94, $m=99, $zi=58){
 										</div>
 										<table class="table table-bordered">
 											<caption class="caption-top text-center">Data Luka Ringan <?=  $_SESSION['hitung_tahundataMentahLR']; ?></caption>
-											<caption class="caption-top">								
+											<caption>								
 												<ul style="list-style-type:square;">
 													<li style="color: blue;"><span style="color: gray;">Musim Hujan<span></li>
 														<li style="color: red;"><span style="color: gray;">Musim Kemarau<span></li>

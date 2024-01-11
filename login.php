@@ -107,8 +107,9 @@ if(isset($_POST['login'])){
                             <div class="col-lg-12">
                                 <div class="p-5">
                                     <div class="text-center">
+                                         <h1 class="h1 text-gray-900 mb-4">Selamat Datang!</h1>
                                         <h3 class="text-gray-900 mb-4">Simulasi Monte Carlo Prediksi Jumlah Korban Kecelakaan Lalu Lintas Kota Kupang </h3>
-                                        <h1 class="h4 text-gray-900 mb-4">Selamat Datang!</h1>
+                                       
                                     </div>
                                     <?php if(isset($error))  : ?>
                                         <?php  echo "
