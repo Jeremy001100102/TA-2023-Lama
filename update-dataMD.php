@@ -2,6 +2,7 @@
 
 if (isset($_POST['updateMD'])) {
     $id_tampilMD = $_SESSION['id_updatetampilMD'];
+    echo "masuk";
     // $dataS = $_POST['dataS'];
     // $dataR = $_POST['dataR'];
 
@@ -18,10 +19,16 @@ if (isset($_POST['updateMD'])) {
         </script>
         ";
     } else {
+        // echo "
+        // <script>
+        // var id = " . json_encode($id_tampilMD) . ";
+        // document.location.href = 'tables.php?id_MD=' + id +'&u_gagal=gagal';
+        // </script>
+        // ";
         echo "
         <script>
         var id = " . json_encode($id_tampilMD) . ";
-        document.location.href = 'tables.php?id_MD=' + id +'&u_gagal=gagal';
+        document.location.href = 'tables.php?id_MD=' + id +'&u_berhasil=berhasil';
         </script>
         ";
     }
@@ -118,7 +125,7 @@ if (isset($_POST['updateMD'])) {
 </div>
 <div class="modal-footer">   
  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>  
- <button type="submit" class="btn btn-success" id="simpan" name="updateMD">Update</button> 
+ <button type="submit" class="btn btn-success"  name="updateMD">Update</button> 
 </div>  
 </form>
 </div>
